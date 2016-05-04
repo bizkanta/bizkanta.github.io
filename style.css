@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+
+}
+
+.mainimg {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.section1, .section2 {
+  color: rgba(0,0,0,0.8);
+  max-width: 50%;
+  margin: auto;
+}
+
+.section2 {
+  font-family: 'Merriweather', serif;
+}
+
+.mainheadings {
+  font-family: 'Roboto', sans-serif;
+}
+
+.mainps {
+  font-family: 'Merriweather', serif;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+h2 {
+  color: rgba(0,0,0,.44);
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+hr {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+}
+
+hr:before {
+    content: '...';
+    display: inline-block;
+    color: rgba(0,0,0,.6);
+    position: relative;
+    top: -8px;
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    font-size: 28px;
+    letter-spacing: .6em;
+}
