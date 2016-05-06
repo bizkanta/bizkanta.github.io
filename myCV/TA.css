@@ -14,7 +14,7 @@ body {
 .wholepage {
   background-color: rgba(230,250,240,0.75);
   width: 100%;
-  padding: 30px;
+  padding: 20px 50px;
   margin: 0 auto;
 }
 
@@ -26,7 +26,7 @@ header img {
 header {
   text-shadow: 1px .5px darkgreen;
   text-align: center;
-  line-height: .7em;
+  line-height: 1em;
 }
 
 .section1 {
@@ -41,7 +41,7 @@ header {
 }
 
 section ul ul {
-   list-style-type: square; 
+   list-style-type: square;
 }
 
 section {
