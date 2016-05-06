@@ -1,0 +1,59 @@
+body {
+  background-image: url("engineering-wallpaper-910.jpg");
+  background-repeat: no-repeat;
+  background-size: 1400px;
+  background-position: center;
+  font-family: 'Droid Sans', sans-serif;
+  width: 800px;
+  margin: 0 auto;
+  background-attachment: fixed;
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+
+.wholepage {
+  background-color: rgba(230,250,240,0.75);
+  width: 100%;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+header img {
+  width: 180px;
+  border: 2px solid green;
+}
+
+header {
+  text-shadow: 1px .5px darkgreen;
+  text-align: center;
+  line-height: .7em;
+}
+
+.section1 {
+  padding-left: 300px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.section1 ul{
+  list-style: none;
+  padding-left: 0;
+}
+
+section {
+  padding: 20px;
+}
+
+span {
+  padding-right: 20px;
+}
+
+hr {
+  width: 600px;
+  border: .2px dotted green;
+}
+
+h6 {
+  text-align: center;
+  font-size: 15px;
+}
