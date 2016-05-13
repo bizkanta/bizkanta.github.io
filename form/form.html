@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>form_project</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="form.css">
+  </head>
+  <body>
+    <div class="container">
+      <form action="index.html" method="post">
+        <h1>Profil</h1>
+        <div class="columns">
+          <div class="column1">
+            <h2>Szemelyes adatok</h2>
+            <p>
+              <label for="name">Nev <span>*</span></label>
+              <input class="field" type="text" required id="name" placeholder="">
+            </p>
+            <div class="birth-gender">
+              <div class="birth">
+                <label for="number">Szuletesi eved</label>
+                <input class="birthyear" type="number" id="number" placeholder="pl. 1984">
+              </div>
+              <div class="genders">
+                <p>Nemed</p>
+                <ul class="genderlist">
+                  <li>
+                    <label for="gender1">
+                      <input type="radio" id="gender1" name="gender">
+                      no
+                    </label>
+                  </li>
+                  <li>
+                    <label for="gender2">
+                      <input type="radio" id="gender2" name="gender">
+                      ferfi
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <p>Milyen markakat szeretsz?</p>
+              <div class="brands">
+                <ul class="brandslist">
+                  <li>
+                    <label for="marks1">
+                      <input type="checkbox" id="marks1">
+                      Adidas
+                    </label>
+                  </li>
+                  <li>
+                    <label for="marks2">
+                      <input type="checkbox" id="marks2">
+                      Apple
+                    </label>
+                  </li>
+                  <li>
+                    <label for="marks3">
+                      <input type="checkbox" id="marks3">
+                      Coca-Cola
+                    </label>
+                  </li>
+                  <li>
+                    <label for="marks4">
+                      <input type="checkbox" id="marks4">
+                      Mazda
+                    </label>
+                  </li>
+                  <li>
+                    <label for="marks5">
+                      <input type="checkbox" id="marks5">
+                      Nike
+                    </label>
+                  </li>
+                  <li>
+                    <label for="marks6">
+                      <input type="checkbox" id="marks6">
+                      Opel
+                    </label>
+                  </li>
+                  <li>
+                    <label for="marks7">
+                      <input type="checkbox" id="marks7">
+                      Rey-Ban
+                    </label>
+                  </li>
+                  <li>
+                    <label for="marks8">
+                      <input type="checkbox" id="marks8">
+                      Starbucks
+                    </label>
+                  </li>
+                  <li>
+                    <label for="marks9">
+                      <input type="checkbox" id="marks9">
+                      Tesla
+                    </label>
+                  </li>
+                  <li>
+                    <label for="marks10">
+                      <input type="checkbox" id="marks10">
+                      Yahoo
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <p class="choosemore">Tobbet is valaszthatsz!</p>
+            </div>
+          </div>
+          <div class="column2">
+            <h2>Kapcsolat</h2>
+            <p>
+              <label for="tel">Telefonszam <span>*</span></label>
+              <input class="field" type="tel" required id="tel" placeholder="+36 -- --- ----">
+            </p>
+            <p>
+              <label for="email">E-mail cim <span>*</span></label>
+              <input class="field" type="email" required id="email" placeholder="nev@domain.hu">
+            </p>
+            <p>
+              <label for="facebook">Facebook profilod</label>
+              <input class="field" type="url" id="facebook" placeholder="http://facebook.com/...">
+            </p>
+            <p>
+              <label for="twitter">Twitter profilod</label>
+              <input class="field" type="url" id="twitter" placeholder="http://twitter.com/...">
+            </p>
+            <p>
+              <label for="house">Milyen hazban laksz?</label>
+              <select class="field chooseone" id="house">
+                <option disabled selected>valassz tipust</option>
+                <option>csaladi</option>
+                <option>panel</option>
+                <option>ikerhaz</option>
+              </select>
+            </p>
+          </div>
+        </div>
+        <div class="bottom-content">
+          <div>
+            <label for="msg">Bemutatkozas <span>*</span></label>
+            <textarea required id="msg">Irj magadrol par mondatot!</textarea>
+          </div>
+          <div>
+            <p>CV feltoltese</p>
+            <input type="file" id="file" value="upload file" style="display: none">
+            <input class="btn btn-secondary uploadbtn" type="button" value="FILE KIVALASZTASA" onclick="document.getElementById('file').click();">
+            <label for="file"></label>
+          </div>
+          <div>
+            <label class="terms" for="terms">
+              <input type="checkbox" required id="terms">
+              Elfogadom a <a href="">felhasznalasi felteteleket</a>
+            </label>
+          </div>
+          <div class="save-reset-buttons">
+            <p>
+              <button class="btn btn-primary savebtn" type="submit" value="Submit">MENTES</button>
+            </p>
+            <p>
+              <button class="btn btn-secondary resetbtn" type="reset" value="Reset">URLAP TORLESE</button>
+            </p>
+        </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
