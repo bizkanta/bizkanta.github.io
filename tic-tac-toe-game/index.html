@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <script src="game.js"></script>
+  <script src="game-service.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>tic-tac-toe</title>
+</head>
+<body ng-app="ticTacToe">
+  <div class="wrapper" ng-controller="GameCtrl">
+    <div class="notification">
+      <span ng-if="!gameOver">Next player: {{currentPlayer}}</span>
+      <span ng-if="winner">The winner is: {{winner}}!</span>
+      <span ng-if="tie">Tie!</span>
+    </div>
+    <table>
+      <tr ng-repeat="row in board track by $index" ng-init="rowIndex=$index">
+        <td ng-repeat="cell in row track by $index"
+          ng-init="columnIndex=$index"
+          ng-click="onSelectCell(rowIndex, columnIndex)"
+          ng-class="{'winner': winner && winner === cell}">
+          {{cell}}
+        </td>
+      </tr>
+    </table>
+    <footer>
+      <a ng-click="newGame()" href="" class="linkButton">New game</a>
+    </footer>
+  </div>
+</body>
+</html>
