@@ -1,0 +1,148 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/paper-checkbox/paper-checkbox.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/iron-autogrow-textarea/iron-autogrow-textarea.html">
+
+<dom-module id="employees-list">
+
+  <template>
+    <style>
+      :host {
+        box-sizing: border-box;
+      }
+    </style>
+
+    <iron-ajax
+      auto
+      id="ajax"
+      url="../persons.json"
+      last-response="{{employees}}"
+      on-response="_response">
+    </iron-ajax>
+
+    <div class="wrapper">
+
+      <div>
+        <div class="add-button">
+          <paper-button raised class="add" onclick="dialog.open()">Add</paper-button>
+        </div>
+
+        <paper-dialog id="dialog">
+          <div class="pop-up-container">
+            <paper-input
+              label="Name"
+              required
+              value="{{newEmployee.name}}">
+            </paper-input>
+            <paper-input
+              label="Job title"
+              value="{{newEmployee.job}}">
+            </paper-input>
+            <paper-input
+              label="Age"
+              required
+              value="{{newEmployee.age}}"
+              auto-validate
+              pattern="[0-9]*">
+            </paper-input>
+            <paper-input
+              label="Nickname"
+              value="{{newEmployee.nick}}">
+            </paper-input>
+            <paper-checkbox
+            class="pop-up-checkbox"
+              required
+              checked="{{newEmployee.employee}}">
+              Employee
+            </paper-checkbox>
+          </div>
+          <div class="buttons">
+            <paper-button dialog-confirm autofocus on-tap="addEmployee">OK</paper-button>
+            <paper-button dialog-dismiss>Cancel</paper-button>
+          </div>
+        </paper-dialog>
+      </div>
+
+      <div class="employee-list">
+        <div class="item title">Name</div>
+        <div class="item title">Job</div>
+        <div class="item title age">Age</div>
+        <div class="item title nick">Nickname</div>
+        <div class="item title employee">Employee</div>
+        <div class="item title del"></div>
+      </div>
+
+      <template is="dom-repeat" items="{{employees}}">
+        <div class="employee-list">
+          <div class="item">{{item.name}}</div>
+          <div class="item">{{item.job}}</div>
+          <div class="item age">{{item.age}}</div>
+          <div class="item nick">{{item.nick}}</div>
+          <paper-checkbox class="item employee" checked={{item.employee}} noink></paper-checkbox>
+          <paper-icon-button class="del" icon="delete" on-tap="deleteEmployee"></paper-icon-button>
+        </div>
+      </template>
+
+      <h4>Data dump</h4>
+      <iron-autogrow-textarea disabled value="{{dataDumbText}}"></iron-autogrow-textarea>
+
+    </div>
+
+  </template>
+
+  <script>
+    Polymer({
+      is: 'employees-list',
+
+      properties: {
+
+        newEmployee: {
+          type: Object,
+          notify: true,
+          value: {},
+        },
+
+        employees: {
+          type: Array,
+          notify: true,
+          reflectToAttribute: true
+        },
+
+        dataDumbText: {
+          type: String,
+          notify: true,
+          value: ''
+        }
+      },
+
+      _response: function() {
+        this.$.ajax.lastResponse = this.employees;
+      },
+
+      addEmployee: function(newEmployee) {
+        this.push('employees', this.newEmployee);
+        this.updateDataDumb();
+        this.newEmployee = {};
+      },
+
+      deleteEmployee: function(event) {
+        var employee = event.model.item;
+        var index = this.employees.indexOf(employee);
+        this.splice('employees', index, 1);
+        this.dataDumbText = '';
+      },
+
+      updateDataDumb: function() {
+        this.dataDumbText = JSON.stringify(this.employees, undefined, ' ');
+      },
+    })
+
+  </script>
+
+</dom-module>

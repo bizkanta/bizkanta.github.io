@@ -1,0 +1,74 @@
+.wrapper {
+  padding: 30px;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  width: 650px;
+  margin: 0 auto;
+  background: #F5EBFF;
+  border-radius: 10px;
+}
+.add-button {
+  margin-bottom: 30px;
+  text-align: center;
+}
+paper-button.add {
+  width: 100px;
+  background-color: #F9EFFF;
+}
+paper-button.add:hover {
+  background-color: #C1CBFA;
+}
+.employee-list {
+  display: flex;
+}
+.item {
+  padding-left: 10px;
+  width: 150px;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+}
+.item.age {
+  width: 50px;
+}
+.item.employee {
+  width: 100px;
+  justify-content: center;
+}
+.item.nick {
+  width: 100px;
+}
+.title {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.title.age {
+  width: 50px;
+}
+.title.employee {
+  width: 100px;
+}
+.title.nick {
+  width: 100px;
+}
+.title.del {
+  width: 50px;
+  padding: 0;
+}
+paper-icon-button.del {
+  width: 50px;
+  border-bottom: 1px solid black;
+}
+.pop-up-checkbox {
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+.pop-up-container {
+  width: 300px;
+  border-radius: 10%;
+}
+iron-autogrow-textarea {
+  /*height: 100px;*/
+  width: 650px;
+}
