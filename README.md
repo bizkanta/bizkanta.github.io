@@ -5,7 +5,7 @@
 
 #### HTML, CSS
 - My CV |
-  [look at myCV](https://bizkanta.github.io/myCV/)
+  [look at my CV](https://bizkanta.github.io/myCV/)
 - CV of Anakin Skywalker |
   [look at Anakin's CV](https://bizkanta.github.io/anakin_CV/anakin.html)
   - compare it to [Anakin's CV template](https://projects.invisionapp.com/share/X575YEGVU#/screens/155416515_Greenfox-Anakins-Cv)
@@ -27,12 +27,12 @@
 
 #### HTML, CSS, AngularJS
 - Tic-tac-toe Game |
-  [play tic-tac-toe](bizkanta.github.io/tic-tac-toe-game/)
+  [play tic-tac-toe](http://bizkanta.github.io/tic-tac-toe-game/)
 
 #### HTML, CSS, AngularJS, Bootstrap  
 - Word Game |
-  [play word-game](bizkanta.github.io/word-game/)
+  [play word-game](http://bizkanta.github.io/word-game/)
 
 #### HTML, CSS, Polymer
 - Employee-list |
-  [watch employees](bizkanta.github.io/employee_list/)
+  [watch employees](http://bizkanta.github.io/employee_list/)
