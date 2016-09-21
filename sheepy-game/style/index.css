@@ -1,0 +1,106 @@
+body {
+  margin: auto 0;
+  padding: 0;
+  margin-top: 50px;
+  }
+
+.wrapper {
+  width: 1000px;
+  height: 600px;
+  background-image: url("../img/background.jpg");
+  margin: 0 auto;
+  position: relative;
+}
+
+.fox {
+  margin-top: 50px;
+  margin-left: 400px;
+}
+
+.title {
+  position: absolute;
+  top: 240px;
+  left: 110px;
+  width: 800px;
+  text-align: center;
+}
+
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  height: 80px;
+
+}
+
+.start {
+  position: absolute;
+  top: 420px;
+  left: 340px;
+  width: 300px;
+  height: auto;
+  background-repeat: no-repeat;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+@keyframes start-pulse {
+  25% {-webkit-transform: scale(1.1); transform: scale(1.1);}
+  75% {-webkit-transform: scale(0.9); transform: scale(0.9);}
+}
+
+.start:hover, .start:focus, .start:active {
+  -webkit-animation-name: start-pulse;
+  animation-name: start-pulse;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.created-by {
+  vertical-align: top;
+  width: 200px;
+  height: 70px;
+  margin: 10px 0 0 15%;
+}
+
+.profile {
+ width: 70px;
+ margin: 10px;
+}
+
+.profile:hover {
+ opacity: 0.3;
+}
+
+.profile-container {
+ position: relative;
+}
+
+.profile-text {
+ position: absolute;
+ cursor: pointer;
+ top: 20px;
+ left: 30px;
+ color: black;
+ opacity: 0;
+ -webkit-transition: opacity 500ms;
+ -moz-transition: opacity 500ms;
+ -o-transition: opacity 500ms;
+ transition: opacity 500ms;
+}
+
+.profile-container:hover .profile-text {
+opacity: 1;
+}
+
+footer {
+ display: flex;
+
+}
